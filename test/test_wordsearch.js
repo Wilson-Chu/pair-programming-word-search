@@ -35,4 +35,28 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present VERTICALLY", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F'],
+      ['S', 'E', 'B', 'N'],
+      ['Y', 'F', 'O', 'F'],
+      ['H', 'M', 'B', 'T'],
+
+    ], 'BOB');
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present but reversed!", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F'],
+      ['A', 'N', 'I', 'T'],
+      ['Y', 'F', 'O', 'F'],
+      ['H', 'M', 'B', 'T'],
+
+    ], 'TINA');
+
+    assert.isTrue(result);
+  });
 });
